@@ -110,7 +110,7 @@ header div {
     align-items: center;
     width: 90vw;
     margin: 0 auto;
-    /* border: 2px solid black; */
+    padding-bottom: 40px;
 }
 
 .stakeholderLogo img {
@@ -124,4 +124,16 @@ footer {
     color: #aaaaaa;
     padding: 24px 0;
     font-size: 0.8rem;
+    text-align: center;
+}
+
+.footerIntro {
+    line-height: 1.5rem;
+}
+
+.termsConditions a {
+    text-align: center;
+    display: block;
+    line-height: 2rem;
+    color: #aaaaaa;
 }
