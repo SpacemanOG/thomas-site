@@ -17,4 +17,55 @@ body {
 h1,
 h2 {
     font-family: 'Vollkorn', serif;
+    text-align: center;
+}
+
+.sideCushion {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+
+/* MAIN BODY SETTINGS */
+
+/* INTRO SETTINGS */
+
+.intro p {
+    border-left: 4px solid #c9611a;
+    padding-left: 16px;
+    line-height: 1.5rem;
+}
+
+.intro p:nth-child(3) {
+    border-left: 4px solid #007699;
+    margin-bottom: 40px;
+}
+
+
+/* CLIENT CATEGORIES */
+
+.clientCategories {
+    height: 670px;
+    background: rgb(37, 79, 118);
+    background: linear-gradient(45deg, rgba(37, 79, 118, 1) 0%, rgba(0, 118, 153, 1) 100%);
+    color: white;
+    padding-top: 40px;
+}
+
+.clientCategories h2 {
+    margin: 0 0 40px 0;
+}
+
+.clientCategories ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.clientCategories li {
+    margin-bottom: 24px;
+    line-height: 1.5rem;
+}
+
+.clientCategories em {
+    text-shadow: 1px 1px 0 black;
 }
