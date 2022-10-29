@@ -1,0 +1,20 @@
+/* Color palette
+
+Dark orange:#c9611a 
+Dark blue: #254f76 */
+
+/* GLOBAL SETTINGS */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    font-family: 'Vollkorn', serif;
+}
