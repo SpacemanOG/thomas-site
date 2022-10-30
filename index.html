@@ -11,17 +11,26 @@
         rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico">
     <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./script.js" defer></script>
     <title>businessmodelgame.com</title>
 </head>
 
 <body>
     <!-- THIS IS THE TOP NAVIGATION PANEL -->
     <header>
+        <button class="mobileNavToggleBtn" aria-controls="navigationContainer" aria-expanded="false">
+            <!-- <span class="sr-only">Menu</span> -->
+        </button>
+
         <nav>
-            <div>
-                <h1>LEAP - The Business Model Game</h1>
-            </div>
+            <ul id="navigationContainer" data-visible="false" class="navigationContainer flex">
+                <li><a href="https://spacemanog.github.io/thomas-site/">Home</a></li>
+                <li><a href="https://www.businessmodelgame.com/en/innovation-game">About</a></li>
+                <li><a href="https://www.businessmodelgame.com/en/entrepreneurship-game">LEAP for Education</a></li>
+                <li><a href="https://www.businessmodelgame.com/en/business-game">LEAP for Business</a></li>
+            </ul>
         </nav>
+
 
         <!-- THIS IS THE TOP VIDEO -->
         <section class="videoContainer">
@@ -30,15 +39,15 @@
                     <source
                         src="https://video.squarespace-cdn.com/content/v1/60b4fdbe8842200ca6cde0a7/d3947cb5-4f2f-43be-bef7-6edeb7e0036f/mp4-h264-aac-640:360"
                         type="video/mp4">
-                    Your browser does not support the video tag.
+                    Your browser does not support the video.
                 </video>
             </div>
         </section>
     </header>
 
-    <!-- THIS IS THE MAIN BODY OF THE PAGE -->
+
+    <!-- INTRO SECTION -->
     <main>
-        <!-- INTRO SECTION -->
         <section class="intro">
             <div class="sideCushion">
                 <h1>The entrepreneurship game that transforms ideas into profitable business models</h1>
@@ -92,37 +101,37 @@
                 <img src="./images/img6_strasbourg.jpg" alt="EM Strasbourg Business School is our valuable client" />
             </div>
         </section>
-
-
-        <!-- THIS IS THE FOOTER -->
-        <footer>
-            <div class="sideCushion">
-                <p class="footerIntro">We create educational tools and games for serious learning situations that foster
-                    dialogue and
-                    engagement.</p>
-
-                <div class="termsConditions">
-                    <a href="https://www.businessmodelgame.com/terms-of-service">Terms and Conditions</a>
-                    <a href="https://www.businessmodelgame.com/privacy-policy">Privacy Policy</a>
-                </div>
-                <hr>
-
-                <h3>Get in Touch</h3>
-                <address>                    
-                    <p>Email:<br>hello@businessmodelgame.com</p>
-                    <p>Phone:<br>+45 51929202</p>
-                    <p>Address:<br>Kaarsbergsvej 2, 8400 Ebeltoft, Denmark</p>
-                </address>
-                <hr>
-
-                <div class="parentCompanyInfo">
-                    <h3>LEAP -The Business Model Game</h3>
-                    <p>Company name: ChewNature</p>
-                    <p>VAT number: DK38362097</p>
-                </div>
-            </div>
-        </footer>
     </main>
+
+
+    <!-- THIS IS THE FOOTER -->
+    <footer>
+        <div class="sideCushion">
+            <p class="footerIntro">We create educational tools and games for serious learning situations that foster
+                dialogue and
+                engagement.</p>
+
+            <div class="termsConditions">
+                <a href="https://www.businessmodelgame.com/terms-of-service">Terms and Conditions</a>
+                <a href="https://www.businessmodelgame.com/privacy-policy">Privacy Policy</a>
+            </div>
+            <hr>
+
+            <h3>Get in Touch</h3>
+            <address>
+                <p>Email:<br>hello@businessmodelgame.com</p>
+                <p>Phone:<br>+45 51929202</p>
+                <p>Address:<br>Kaarsbergsvej 2, 8400 Ebeltoft, Denmark</p>
+            </address>
+            <hr>
+
+            <div class="parentCompanyInfo">
+                <h3>LEAP -The Business Model Game</h3>
+                <p>Company name: ChewNature</p>
+                <p>VAT number: DK38362097</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

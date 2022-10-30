@@ -14,6 +14,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 h1,
@@ -23,6 +24,7 @@ h2 {
 }
 
 .sideCushion {
+    max-width: 300px;
     width: 80vw;
     margin: 0 auto;
 }
@@ -32,20 +34,75 @@ h2 {
 /* INDIVIDUAL SETTINGS */
 
 /* TOP NAVIGATION PANEL SETTINGS */
+/* TOP NAVIGATION PANEL SETTINGS */
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 header h1 {
     font-size: 1rem;
-    color: white;
+    color: #aaaaaa;
     margin: 0;
-    padding: 24px 0;
 }
 
-header div {
-    background-color: black;
+.navigationContainer {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(1rem);
+    font-size: x-large;
+    transform: translateX(100%);
 }
 
+.navigationContainer li {
+    padding-bottom: 1rem;
+}
 
-/* MAIN BODY SETTINGS */
+.navigationContainer a {
+    text-decoration: none;
+    color: white;
+}
+
+.navigationContainer a:hover {
+    padding: 0 1rem;
+    border-bottom: 0.25rem solid #007699;
+}
+
+/* MOBILE NAVIGATION TOGGLE BUTTON SETTINGS */
+.mobileNavToggleBtn {
+    z-index: 99;
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    padding: 0;
+    background-image: url(./images/icon-hamburger.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    width: 2rem;
+    aspect-ratio: 1;
+}
+
+/* When navigationContainer is out of Viewport area, data-visible is false. JS can modify the value and turn it to True. When it turns True, CSS can bring the container inside the Viewport using the transform:translate() settings, making it visible! */
+.navigationContainer[data-visible="true"] {
+    transform: translateX(0%);
+}
+
 /* INTRO SETTINGS */
+.intro {
+    padding: 40px 0;
+}
+
+.intro h1 {
+    margin-top: 0;
+}
+
 .intro p {
     border-left: 4px solid #FF7C00;
     padding-left: 16px;
@@ -54,17 +111,15 @@ header div {
 
 .intro p:nth-child(3) {
     border-left: 4px solid #007699;
-    margin-bottom: 40px;
 }
 
 
 /* TARGET GROUP SETTINGS */
 .targetGroup {
-    height: 670px;
     background: rgb(37, 79, 118);
     background: linear-gradient(45deg, rgba(37, 79, 118, 1) 0%, rgba(0, 118, 153, 1) 100%);
     color: white;
-    padding-top: 40px;
+    padding: 40px 0;
 }
 
 .targetGroup h2 {
@@ -96,7 +151,6 @@ header div {
 .stakeholderInfo p {
     line-height: 1.75rem;
     text-align: center;
-    padding: 0 24px;
     margin-bottom: 0;
 }
 
@@ -122,13 +176,14 @@ header div {
 footer {
     background-color: #222222;
     color: #aaaaaa;
-    padding: 24px 0;
+    padding: 40px 0;
     font-size: 0.8rem;
     text-align: center;
 }
 
 .footerIntro {
     line-height: 1.5rem;
+    margin-top: 0;
 }
 
 .termsConditions a {
