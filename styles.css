@@ -1,3 +1,5 @@
+/* MOBILE-FIRST DESIGN */
+
 /* GLOBAL SETTINGS */
 /* GLOBAL SETTINGS */
 * {
@@ -18,7 +20,7 @@ h2 {
 }
 
 .sideCushion {
-    max-width: 300px;
+    min-width: 300px;
     width: 80vw;
     margin: 0 auto;
 }
@@ -41,7 +43,7 @@ header h1 {
     font-size: 1rem;
     color: #aaaaaa;
     margin: 0;
-    padding: 2rem 0 0 1rem;
+    padding: 1.5rem 0 0 1rem;
     text-align: left;
 }
 
@@ -149,7 +151,7 @@ header h1 {
 }
 
 .intro div:nth-child(2) button {
-    width: 120px;
+    max-width: 120px;
     padding: 8px;
     border: 0;
     cursor: pointer;
@@ -250,3 +252,11 @@ footer {
     aspect-ratio: 1;
     filter: invert(81%) sepia(1%) saturate(1%) hue-rotate(327deg) brightness(85%) contrast(88%);
 }
+
+/* DESKTOP SITE SETTINGS */
+/* DESKTOP SITE SETTINGS */
+
+/* Changes made for larger screens */
+@media (min-width: 800px) {}
+
+@media (min-width: 1200px) {}
