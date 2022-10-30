@@ -35,17 +35,27 @@ h2 {
 
 /* TOP NAVIGATION PANEL SETTINGS */
 /* TOP NAVIGATION PANEL SETTINGS */
-.flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+nav {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 4rem;
+    position: fixed;
+    top: 0px;    
 }
 
 header h1 {
     font-size: 1rem;
     color: #aaaaaa;
     margin: 0;
+    padding: 2rem 0 0 1rem;
+    text-align: left;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .navigationContainer {
@@ -58,6 +68,7 @@ header h1 {
     backdrop-filter: blur(1rem);
     font-size: x-large;
     transform: translateX(100%);
+    transition: transform 350ms ease-out;
 }
 
 .navigationContainer li {
@@ -78,7 +89,7 @@ header h1 {
 .mobileNavToggleBtn {
     z-index: 99;
     position: absolute;
-    top: 4rem;
+    top: 1.75rem;
     right: 2rem;
     padding: 0;
     background-image: url(./images/icon-hamburger.svg);
@@ -94,7 +105,24 @@ header h1 {
     transform: translateX(0%);
 }
 
-/* INTRO SETTINGS */
+.mobileNavToggleBtn[aria-expanded="true"] {
+    background-image: url(./images/icon-close.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+/* TOP VIDEO SETTINGS */
+.videoContainer {
+    margin-top: 4rem;
+}
+
+.videoContainer video {
+    width: 100%;
+}
+
+
+/* MAIN BODY INTRO SETTINGS */
+/* MAIN BODY INTRO SETTINGS */
 .intro {
     padding: 40px 0;
 }
