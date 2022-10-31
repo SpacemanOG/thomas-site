@@ -21,6 +21,7 @@ h2 {
 
 .sideCushion {
     min-width: 300px;
+    max-width: 800px;
     width: 80vw;
     margin: 0 auto;
 }
@@ -151,7 +152,10 @@ header h1 {
 }
 
 .intro div:nth-child(2) button {
-    max-width: 120px;
+    width: 32vw;
+    min-width: 120px;
+    max-width: 320px;
+    height: 64px;
     padding: 8px;
     border: 0;
     cursor: pointer;
@@ -160,6 +164,7 @@ header h1 {
     background-color: #FF7C00;
     color: #ffffff;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 
@@ -211,13 +216,14 @@ header h1 {
     grid-template-rows: 1fr 1fr;
     justify-items: center;
     align-items: center;
-    width: 90vw;
+    width: 80vw;
     margin: 0 auto;
     padding-bottom: 40px;
 }
 
 .stakeholderLogo img {
-    max-width: 150px;
+    width: 100%;
+    min-width: 150px;
 }
 
 
@@ -243,6 +249,12 @@ footer {
     color: #aaaaaa;
 }
 
+.address h3,
+.parentCompanyInfo h3 {
+    border-top: 1px solid gray;
+    padding-top: 16px;
+}
+
 /* Social media links */
 .socialLinks {
     display: flex;
@@ -256,10 +268,168 @@ footer {
     filter: invert(81%) sepia(1%) saturate(1%) hue-rotate(327deg) brightness(85%) contrast(88%);
 }
 
+.socialLinks img:hover {
+    transform: translateY(-2px);
+}
+
 /* DESKTOP SITE SETTINGS */
 /* DESKTOP SITE SETTINGS */
 
 /* Changes made for larger screens */
-@media (min-width: 800px) {}
+@media (min-width: 800px) {
+    .intro h1 {
+        font-size: 3rem;
+        line-height: 3.4rem;
+        color: #aaaaaa;
+    }
 
-@media (min-width: 1200px) {}
+    .intro p {
+        font-size: 1.1rem;
+    }
+
+    .intro p:nth-child(3) {
+        margin-bottom: 40px;
+    }
+
+    .targetGroup h2 {
+        font-size: 2rem;
+    }
+
+    .targetGroup p {
+        font-size: 1rem;
+    }
+
+    .stakeholderInfo h2 {
+        font-size: 3rem;
+        line-height: 3.4rem;
+        color: #aaaaaa;
+        margin-bottom: 24px;
+    }
+
+    .stakeholderInfo p {
+        font-size: 1.1rem;
+    }
+
+    .stakeholderLogo {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sideCushion {
+        width: 64vw;
+    }
+
+    /* TOP NAVIGATION */
+    .flex {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navigationContainer {
+        height: 4rem;
+        width: 40vw;
+        transform: translateX(0);
+        background-color: transparent;
+        backdrop-filter: blur(0);
+        font-size: 1rem;
+        margin-left: 56vw;
+    }
+
+    .navigationContainer li {
+        padding-bottom: 0;
+    }
+
+    .navigationContainer a {
+        color: #aaaaaa;
+    }
+
+    .navigationContainer a:hover {
+        padding: 0;
+        border-bottom: 0.25rem solid #007699;
+    }
+
+    .mobileNavToggleBtn {
+        display: none;
+    }
+
+    .navigationContainer img {
+        display: none;
+    }
+
+
+    /* REST OF THE BODY */
+    .intro h1 {
+        text-align: left;
+    }
+
+    .intro div:nth-child(2) {
+        width: 64vw;
+    }
+
+    .targetGroup p {
+        width: 960px;
+    }
+
+    .targetGroup h2 {
+        font-size: 2.4rem;
+    }
+
+    .stakeholderLogo {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .footerGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .5fr .5fr 1fr .5fr;
+        align-content: center;
+        grid-template-areas:
+            "footer-intro footer-intro"
+            "terms contact"
+            "business-info contact"
+            "social social";
+    }
+
+    .footerIntro {
+        grid-area: footer-intro;
+        border-bottom: 1px solid gray;
+    }
+
+    .termsConditions {
+        grid-area: terms;
+    }
+
+    .address {
+        grid-area: contact;
+    }
+
+    .address h3 {
+        margin-top: 0;
+    }
+
+    .parentCompanyInfo {
+        grid-area: business-info;
+    }
+
+    .parentCompanyInfo h3 {
+        margin-top: 28px;
+    }
+
+    .socialLinks {
+        grid-area: social;
+        border-top: 1px solid gray;
+        padding-top: 16px;
+    }
+
+    .address h3,
+    .parentCompanyInfo h3 {
+        border-top: 0;
+        padding-top: 0;
+    }
+}
